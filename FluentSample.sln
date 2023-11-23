@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34316.72
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentSample", "FluentSample\FluentSample\FluentSample.csproj", "{6EF3B8BE-99DE-4701-99CF-BFDB4D11C904}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentSample.Client", "FluentSample\FluentSample.Client\FluentSample.Client.csproj", "{0523D299-E993-4042-8A0A-07211F5D7597}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6EF3B8BE-99DE-4701-99CF-BFDB4D11C904}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6EF3B8BE-99DE-4701-99CF-BFDB4D11C904}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6EF3B8BE-99DE-4701-99CF-BFDB4D11C904}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6EF3B8BE-99DE-4701-99CF-BFDB4D11C904}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0523D299-E993-4042-8A0A-07211F5D7597}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0523D299-E993-4042-8A0A-07211F5D7597}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0523D299-E993-4042-8A0A-07211F5D7597}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0523D299-E993-4042-8A0A-07211F5D7597}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6D22C0BF-FF3C-47FE-A4F7-76D329934E40}
+	EndGlobalSection
+EndGlobal
