@@ -1,7 +1,48 @@
 ﻿@page "/"
 
+@inject IMessageService MessageService
+@inject IDialogService DialogService
+
 <PageTitle>Home</PageTitle>
 
 <h1>Hello, world!</h1>
 
 Welcome to your new Fluent Blazor app.
+
+<FluentButton OnClick="@AddInNotificationCenter" Appearance="Appearance.Accent">Add in Notification Center</FluentButton>
+
+@code
+{
+
+    ActionLink<Message> link = new()
+        {
+            Text = "Learn more",
+            Href = "https://bing.com",
+            OnClick = (e) => { DemoLogger.WriteLine($"Message 'learn more' clicked"); return Task.CompletedTask; }
+        };
+
+    int counter = 0;
+
+    void AddInTopBar()
+    {
+        var message = $"Simple message #{counter++}";
+        var type = Enum.GetValues<MessageIntent>()[counter % 4];
+        MessageService.ShowMessageBarAsync(message, type, App.MESSAGES_TOP);
+    }
+
+    void AddInNotificationCenter()
+    {
+        MessageService.ShowMessageBar(options =>
+        {
+            options.Intent = Enum.GetValues<MessageIntent>()[counter % 4];
+            options.Title = $"Simple message #{counter++}";
+            options.Body = "My simple message";
+            options.Link = link;
+            options.Timestamp = DateTime.Now;
+            options.Section = App.MESSAGES_NOTIFICATION_CENTER;
+        });
+    }
+
+
+
+}
